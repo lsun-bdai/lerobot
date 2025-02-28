@@ -2,7 +2,11 @@
 Convert pi0 parameters from Jax to Pytorch
 
 Follow [README of openpi](https://github.com/Physical-Intelligence/openpi) to create a new environment
-and install the required libraries.
+and install the required libraries. 
+
+Note: All of this is done in the openpi environment, using uv run python.
+
+Note that you need to update the lerobot depenency to the latest version.
 
 ```bash
 cd ~/code/openpi
@@ -20,14 +24,14 @@ python
 Converting pi0_base:
 ```python
 python lerobot/common/policies/pi0/conversion_scripts/convert_pi0_to_hf_lerobot.py \
-    --checkpoint_dir /home/remi_cadene/.cache/openpi/openpi-assets/checkpoints/pi0_base/params \
-    --output_path /home/remi_cadene/.cache/openpi/openpi-assets/checkpoints/pi0_base_pytorch
+    --checkpoint_dir /home/lsun/.cache/openpi/openpi-assets/checkpoints/pi0_base/params \
+    --output_path /home/lsun/.cache/openpi/openpi-assets/checkpoints/pi0_base_pytorch
 ```
 
 ```python
 python lerobot/common/policies/pi0/conversion_scripts/convert_pi0_to_hf_lerobot.py \
-    --checkpoint_dir /home/remi_cadene/.cache/openpi/openpi-assets/checkpoints/pi0_aloha_sim/params \
-    --output_path /home/remi_cadene/.cache/openpi/openpi-assets/checkpoints/pi0_aloha_sim_pytorch
+    --checkpoint_dir /home/lsun/.cache/openpi/openpi-assets/checkpoints/pi0_aloha_sim/params \
+    --output_path /home/lsun/.cache/openpi/openpi-assets/checkpoints/pi0_aloha_sim_pytorch
 ```
 """
 

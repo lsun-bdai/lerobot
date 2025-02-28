@@ -132,3 +132,12 @@ class PI0Config(PreTrainedConfig):
     @property
     def reward_delta_indices(self) -> None:
         return None
+
+@PreTrainedConfig.register_subclass("pi0_franka")
+@dataclass
+class PI0FrankaConfig(PI0Config):
+    n_obs_steps: int = 1
+    n_action_steps: int = 50
+    chunk_size: int = 50
+    use_delta_joint_actions_aloha: bool = False
+    adapt_to_pi_aloha: bool = False
