@@ -43,6 +43,10 @@ class PI0Config(PreTrainedConfig):
     # Gripper dimensions will remain in absolute values.
     use_delta_joint_actions_aloha: bool = False
 
+    # Converts joint dimensions to deltas with respect to the current state before passing to the model.
+    # Gripper dimensions will remain in absolute values.
+    use_delta_joint_actions_franka: bool = False
+
     # Tokenizer
     tokenizer_max_length: int = 48
 
